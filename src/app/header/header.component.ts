@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   subTitle = '記載著 Will 在網路世界的學習心得與技術分享';
   imgSrc = '/assets/images/logo.png';
   showIcons = false;
+  fontSize = 24;
   constructor() { }
 
   ngOnInit(): void {
@@ -24,4 +25,15 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  changeSize(event: WheelEvent) {
+    // console.log(event);
+
+    if (event.deltaY > 0) {
+      this.fontSize++;
+    } else {
+      this.fontSize--;
+    }
+
+    event.preventDefault();
+  }
 }

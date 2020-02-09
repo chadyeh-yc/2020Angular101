@@ -29,8 +29,14 @@
         (click)="changeTitle($event)">
 
       <div class="pull-left">
-        <h1><a href="http://blog.miniasp.com/">{{sitName}}</a></h1>
-        <h3 [innerHTML]="subTitle"></h3>
+        <!-- [ngStyle]="{'font-size': fontSize + 'px' }" -->
+        <!-- [ngClass]="{'highlight': fontSize % 2 == 0 }" -->
+
+        <h1 [style.font-size.px]="fontSize" (wheel)="changeSize($event)"><a
+            href="http://blog.miniasp.com/">{{ sitName }}</a>
+        </h1>
+        <h3 [innerHTML]="subTitle" [class.highlight]="fontSize % 2 == 0"></h3>
+
       </div>
 
       <app-social-icons *ngIf="showIcons"></app-social-icons>
