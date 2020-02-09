@@ -101,10 +101,11 @@
         <div class="widget search">
           <div class="widget-content">
             <div id="searchbox">
-              <input type="text" placeholder="請輸入搜尋關鍵字" accesskey="s" [(ngModel)]="key" (keyup.escape)="cleanKey()">
+              <input #tKeyWorld type="text" placeholder="請輸入搜尋關鍵字" accesskey="s" [value]="key"
+                (keyup.escape)="cleanKey()">
+              <input type="button" value="搜尋" id="searchbutton" (click)="key = tKeyWorld.value">
               <br>
               {{key}}
-              <input type="button" value="搜尋" id="searchbutton">
             </div>
           </div>
         </div>
