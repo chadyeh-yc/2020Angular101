@@ -18,4 +18,10 @@ export class HeaderComponent implements OnInit {
     }, 2000);
   }
 
+  changeTitle(event: MouseEvent) {
+    if (event.ctrlKey) {
+      this.sitName += '!';
+    }
+  }
+
 }

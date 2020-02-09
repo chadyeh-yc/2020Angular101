@@ -25,7 +25,8 @@
   <div class="title-wrapper">
     <div class="container" (mouseover)="showIcons=true" (mouseleave)="showIcons=false">
 
-      <img [src]="imgSrc" [attr.chadyeh]="subTitle" class="pull-left logo" alt="The Will Will Web">
+      <img [src]="imgSrc" [attr.chadyeh]="subTitle" class="pull-left logo" alt="The Will Will Web"
+        (click)="changeTitle($event)">
 
       <div class="pull-left">
         <h1><a href="http://blog.miniasp.com/">{{sitName}}</a></h1>
