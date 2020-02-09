@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -9,6 +10,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   key = '';
   title = 'demo1';
+
+  constructor(private http: HttpClient) {
+
+  }
 
   cleanKey() {
     this.key = '';
