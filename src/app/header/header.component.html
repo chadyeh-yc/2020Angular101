@@ -23,16 +23,16 @@
     </div>
   </div>
   <div class="title-wrapper">
-    <div class="container">
+    <div class="container" (mouseover)="showIcons=true" (mouseleave)="showIcons=false">
 
-      <img src="/assets/images/logo.png" class="pull-left logo" alt="The Will Will Web">
+      <img [src]="imgSrc" [attr.chadyeh]="subTitle" class="pull-left logo" alt="The Will Will Web">
 
       <div class="pull-left">
         <h1><a href="http://blog.miniasp.com/">{{sitName}}</a></h1>
-        <h3>記載著 Will 在網路世界的學習心得與技術分享</h3>
+        <h3 [innerHTML]="subTitle"></h3>
       </div>
 
-      <app-social-icons></app-social-icons>
+      <app-social-icons *ngIf="showIcons"></app-social-icons>
 
     </div>
   </div>
