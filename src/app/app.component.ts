@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
   key = '';
   title = 'demo1';
-
+  subTitle = '記載著 Chad 在網路世界的學習心得與技術分享';
   data: Article[];
 
   constructor(private http: HttpClient) {
