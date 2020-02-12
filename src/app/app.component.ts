@@ -11,14 +11,14 @@ export class AppComponent implements OnInit {
   key = '';
   title = 'demo1';
 
-  data: any;
+  data: Article[];
 
   constructor(private http: HttpClient) {
 
   }
 
   ngOnInit(): void {
-    this.http.get('/api/articles.json').subscribe((value) => {
+    this.http.get<Article[]>('/api/articles.json').subscribe((value) => {
       this.data = value;
     });
   }
@@ -26,4 +26,14 @@ export class AppComponent implements OnInit {
   cleanKey() {
     this.key = '';
   }
+}
+export interface Article {
+  id: number;
+  href: string;
+  title: string;
+  date: string;
+  author: string;
+  category: string;
+  'category-link': string;
+  summary: string;
 }
