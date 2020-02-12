@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SocialIconsComponent } from './header/social-icons/social-icons.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ArticleComponent } from './article/article.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SocialIconsComponent
+    SocialIconsComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
