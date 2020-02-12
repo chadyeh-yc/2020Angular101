@@ -26,6 +26,10 @@ export class AppComponent implements OnInit {
   cleanKey() {
     this.key = '';
   }
+
+  headerClickLogo(str: string) {
+    this.key = str;
+  }
 }
 export interface Article {
   id: number;
